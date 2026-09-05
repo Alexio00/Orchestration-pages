@@ -66,6 +66,7 @@ async function loadSite() {
     document.getElementById('adapter-version').textContent = manifest.cloudAdapterVersion;
     document.getElementById('source-revision').textContent = `Источник: ${manifest.sourceRevision.slice(0, 7)}`;
     document.getElementById('release-link').href = manifest.releaseUrl;
+    document.getElementById('snapshot-link').href = `content/releases/${manifest.snapshotId}/manifest.json`;
     await Promise.all([
       loadText('content/latest/chat-prompt.txt', 'chat-content'),
       loadText('content/latest/project-instructions.md', 'project-content'),
