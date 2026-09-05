@@ -4,7 +4,7 @@
   "snapshotId": "v5.0.0-bootstrap-1.1.1-cloud-1.1.1",
   "bootstrapVersion": "1.1.1",
   "cloudAdapterVersion": "1.1.1",
-  "sourceRevision": "354aa440540ea7ad1adce7ef6f855645c919f0eb",
-  "publishedAt": "2026-09-05T13:40:06+00:00",
+  "sourceRevision": "5d786b8cd42940a5cd72e8b9741064ab4d78589a",
+  "publishedAt": "2026-09-05T13:39:16+00:00",
   "releaseUrl": "https://github.com/Alexio00/Orchestration/releases/tag/v5.0.0"
 }
