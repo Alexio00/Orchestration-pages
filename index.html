@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#080d19">
+  <meta name="description" content="Официальные инструкции по активации General 5 — компактного PM-оркестратора для ведения проектов.">
+  <title>General 5 — активация</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="General 5 — главная">
+      <span class="brand-mark" aria-hidden="true">G5</span>
+      <span>General 5</span>
+    </a>
+    <div class="release-badge"><span></span><strong id="header-version">5.0.0</strong>&nbsp;stable</div>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">PM-оркестратор для проектной работы</p>
+      <h1 id="page-title">Выберите способ активации</h1>
+      <p class="lead">Один стабильный набор правил — для обычного чата, проекта или Claude Code cloud.</p>
+      <dl class="versions" aria-label="Версии компонентов">
+        <div><dt>General</dt><dd id="general-version">5.0.0</dd></div>
+        <div><dt>Bootstrap</dt><dd id="bootstrap-version">1.1.1</dd></div>
+        <div><dt>Cloud Adapter</dt><dd id="adapter-version">1.1.1</dd></div>
+      </dl>
+    </section>
+
+    <section class="activation" aria-label="Способы активации">
+      <div class="tabs" role="tablist" aria-label="Способ активации">
+        <button class="tab active" id="tab-chat" role="tab" aria-selected="true" aria-controls="panel-chat" data-panel="chat">
+          <span class="tab-number">01</span>
+          <span><strong>Первое сообщение</strong><small>Обычный чат</small></span>
+        </button>
+        <button class="tab" id="tab-project" role="tab" aria-selected="false" aria-controls="panel-project" data-panel="project" tabindex="-1">
+          <span class="tab-number">02</span>
+          <span><strong>Инструкции проекта</strong><small>ChatGPT или Claude</small></span>
+        </button>
+        <button class="tab" id="tab-cloud" role="tab" aria-selected="false" aria-controls="panel-cloud" data-panel="cloud" tabindex="-1">
+          <span class="tab-number">03</span>
+          <span><strong>Setup script</strong><small>Claude Code cloud</small></span>
+        </button>
+      </div>
+
+      <article class="panel active" id="panel-chat" role="tabpanel" aria-labelledby="tab-chat" data-panel="chat">
+        <div class="panel-copy">
+          <p class="panel-kicker">Для чата без проекта</p>
+          <h2>Отправьте промпт первым сообщением</h2>
+          <ol>
+            <li>Создайте новый чат.</li>
+            <li>Скопируйте блок целиком и отправьте первым сообщением.</li>
+            <li>Следующим сообщением передайте состояние проекта или обычную задачу.</li>
+          </ol>
+          <p class="note">Правила действуют только в текущем чате. Новому чату потребуется повторная активация.</p>
+        </div>
+        <div class="code-card">
+          <div class="code-toolbar"><span>Промпт для первого сообщения</span><button class="copy" data-copy="chat-content">Копировать</button></div>
+          <pre><code id="chat-content">Загрузка…</code></pre>
+        </div>
+      </article>
+
+      <article class="panel" id="panel-project" role="tabpanel" aria-labelledby="tab-project" data-panel="project" hidden>
+        <div class="panel-copy">
+          <p class="panel-kicker">Для постоянной работы в проекте</p>
+          <h2>Добавьте полный адаптер в инструкции проекта</h2>
+          <ol>
+            <li>Откройте инструкции ChatGPT Project или Claude Project.</li>
+            <li>Замените прежнюю версию General полным блоком ниже.</li>
+            <li>Добавьте <code>PROJECT-STATE.md</code> в файлы или знания проекта.</li>
+          </ol>
+          <p class="note">Не наслаивайте несколько версий General. После сохранения начинайте новый чат с обычной задачи.</p>
+        </div>
+        <div class="code-card">
+          <div class="code-toolbar"><span>PROJECT-INSTRUCTIONS.md</span><button class="copy" data-copy="project-content">Копировать</button></div>
+          <pre><code id="project-content">Загрузка…</code></pre>
+        </div>
+      </article>
+
+      <article class="panel" id="panel-cloud" role="tabpanel" aria-labelledby="tab-cloud" data-panel="cloud" hidden>
+        <div class="panel-copy">
+          <p class="panel-kicker">Для облачного окружения Claude Code</p>
+          <h2>Вставьте скрипт в настройки окружения</h2>
+          <ol>
+            <li>Откройте настройки окружения на <code>claude.ai/code</code>.</li>
+            <li>Скопируйте весь блок в поле <strong>Setup script</strong>.</li>
+            <li>Сохраните окружение и запустите новую cloud-сессию.</li>
+          </ol>
+          <p class="note">Скрипт обновляет только управляемый блок глобального <code>CLAUDE.md</code> и сохраняет остальное содержимое.</p>
+        </div>
+        <div class="code-card">
+          <div class="code-toolbar"><span>CLAUDE-CODE-SETUP.sh</span><button class="copy" data-copy="cloud-content">Копировать</button></div>
+          <pre><code id="cloud-content">Загрузка…</code></pre>
+        </div>
+      </article>
+    </section>
+
+    <section class="verification" aria-labelledby="verification-title">
+      <div>
+        <p class="eyebrow">Проверяемый источник</p>
+        <h2 id="verification-title">Стабильная версия не меняется задним числом</h2>
+      </div>
+      <div class="verification-links">
+        <a id="release-link" href="https://github.com/Alexio00/Orchestration/releases/tag/v5.0.0">Открыть релиз <span aria-hidden="true">↗</span></a>
+        <a href="content/releases/v5.0.0/manifest.json">Manifest версии <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>General 5 · русский язык</span>
+    <span id="source-revision">Источник: загрузка…</span>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
