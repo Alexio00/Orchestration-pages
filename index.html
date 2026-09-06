@@ -3,117 +3,61 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="dark">
-  <meta name="theme-color" content="#080d19">
-  <meta name="description" content="Официальные инструкции по активации General 5 — компактного PM-оркестратора для ведения проектов.">
-  <title>General 5 — активация</title>
+  <meta name="description" content="Инструкции по активации General 5 — PM-оркестратора для ведения проектов.">
+  <title>General 5 — инструкция по активации</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="./" aria-label="General 5 — главная">
-      <span class="brand-mark" aria-hidden="true">G5</span>
-      <span>General 5</span>
-    </a>
-    <div class="release-badge"><span></span><strong id="header-version">5.0.0</strong>&nbsp;stable</div>
-  </header>
-
   <main>
-    <section class="intro" aria-labelledby="page-title">
-      <p class="eyebrow">PM-оркестратор для проектной работы</p>
-      <h1 id="page-title">Выберите способ активации</h1>
-      <p class="lead">Один стабильный набор правил — для обычного чата, проекта или Claude Code cloud.</p>
-      <dl class="versions" aria-label="Версии компонентов">
-        <div><dt>General</dt><dd id="general-version">5.0.0</dd></div>
-        <div><dt>Bootstrap</dt><dd id="bootstrap-version">1.1.1</dd></div>
-        <div><dt>Cloud Adapter</dt><dd id="adapter-version">1.1.1</dd></div>
-      </dl>
-    </section>
+    <h1>General 5 — инструкция по активации</h1>
+    <p class="meta">
+      General <span id="general-version">5.0.0</span>
+      · Bootstrap <span id="bootstrap-version">1.1.1</span>
+      · Cloud Adapter <span id="adapter-version">1.1.1</span>
+    </p>
+    <p>General 5 — PM-оркестратор для ведения проектов. Выберите один способ активации в зависимости от среды.</p>
 
-    <section class="activation" aria-label="Способы активации">
-      <div class="tabs" role="tablist" aria-label="Способ активации">
-        <button class="tab active" id="tab-chat" role="tab" aria-selected="true" aria-controls="panel-chat" data-panel="chat">
-          <span class="tab-number">01</span>
-          <span><strong>Первое сообщение</strong><small>Обычный чат</small></span>
-        </button>
-        <button class="tab" id="tab-project" role="tab" aria-selected="false" aria-controls="panel-project" data-panel="project" tabindex="-1">
-          <span class="tab-number">02</span>
-          <span><strong>Инструкции проекта</strong><small>ChatGPT или Claude</small></span>
-        </button>
-        <button class="tab" id="tab-cloud" role="tab" aria-selected="false" aria-controls="panel-cloud" data-panel="cloud" tabindex="-1">
-          <span class="tab-number">03</span>
-          <span><strong>Setup script</strong><small>Claude Code cloud</small></span>
-        </button>
-      </div>
+    <h2>1. Первое сообщение в чате</h2>
+    <p>Используйте этот вариант для отдельного чата без постоянных инструкций проекта.</p>
+    <p><strong>Шаг 1.</strong> Создайте новый чат.</p>
+    <p><strong>Шаг 2.</strong> Скопируйте блок целиком и отправьте его первым сообщением.</p>
+    <p><strong>Шаг 3.</strong> Следующим сообщением передайте состояние проекта или обычную задачу.</p>
+    <div class="code-block">
+      <pre><code id="chat-content">Загрузка…</code></pre>
+      <button class="copy-btn" type="button" data-copy="chat-content">Копировать</button>
+    </div>
+    <p class="meta">Правила действуют только в текущем чате. В новом чате активацию нужно повторить.</p>
 
-      <article class="panel active" id="panel-chat" role="tabpanel" aria-labelledby="tab-chat" data-panel="chat">
-        <div class="panel-copy">
-          <p class="panel-kicker">Для чата без проекта</p>
-          <h2>Отправьте промпт первым сообщением</h2>
-          <ol>
-            <li>Создайте новый чат.</li>
-            <li>Скопируйте блок целиком и отправьте первым сообщением.</li>
-            <li>Следующим сообщением передайте состояние проекта или обычную задачу.</li>
-          </ol>
-          <p class="note">Правила действуют только в текущем чате. Новому чату потребуется повторная активация.</p>
-        </div>
-        <div class="code-card">
-          <div class="code-toolbar"><span>Промпт для первого сообщения</span><button class="copy" data-copy="chat-content">Копировать</button></div>
-          <pre><code id="chat-content">Загрузка…</code></pre>
-        </div>
-      </article>
+    <h2>2. Инструкции проекта</h2>
+    <p>Используйте этот вариант для постоянной работы в ChatGPT Project или Claude Project.</p>
+    <p><strong>Шаг 1.</strong> Откройте инструкции проекта.</p>
+    <p><strong>Шаг 2.</strong> Замените прежнюю версию General полным блоком ниже.</p>
+    <p><strong>Шаг 3.</strong> Добавьте <code>PROJECT-STATE.md</code> в файлы или знания проекта.</p>
+    <div class="code-block">
+      <pre><code id="project-content">Загрузка…</code></pre>
+      <button class="copy-btn" type="button" data-copy="project-content">Копировать</button>
+    </div>
+    <p class="meta">Не наслаивайте несколько версий General. После сохранения начните новый чат с обычной задачи.</p>
 
-      <article class="panel" id="panel-project" role="tabpanel" aria-labelledby="tab-project" data-panel="project" hidden>
-        <div class="panel-copy">
-          <p class="panel-kicker">Для постоянной работы в проекте</p>
-          <h2>Добавьте полный адаптер в инструкции проекта</h2>
-          <ol>
-            <li>Откройте инструкции ChatGPT Project или Claude Project.</li>
-            <li>Замените прежнюю версию General полным блоком ниже.</li>
-            <li>Добавьте <code>PROJECT-STATE.md</code> в файлы или знания проекта.</li>
-          </ol>
-          <p class="note">Не наслаивайте несколько версий General. После сохранения начинайте новый чат с обычной задачи.</p>
-        </div>
-        <div class="code-card">
-          <div class="code-toolbar"><span>PROJECT-INSTRUCTIONS.md</span><button class="copy" data-copy="project-content">Копировать</button></div>
-          <pre><code id="project-content">Загрузка…</code></pre>
-        </div>
-      </article>
+    <h2>3. Setup script для Claude Code cloud</h2>
+    <p>Используйте этот вариант для облачного окружения Claude Code.</p>
+    <p><strong>Шаг 1.</strong> Откройте настройки окружения на <code>claude.ai/code</code>.</p>
+    <p><strong>Шаг 2.</strong> Скопируйте весь блок в поле <strong>Setup script</strong>.</p>
+    <p><strong>Шаг 3.</strong> Сохраните окружение и запустите новую cloud-сессию.</p>
+    <div class="code-block">
+      <pre><code id="cloud-content">Загрузка…</code></pre>
+      <button class="copy-btn" type="button" data-copy="cloud-content">Копировать</button>
+    </div>
+    <p class="meta">Скрипт обновляет только управляемый блок глобального <code>CLAUDE.md</code> и сохраняет остальное содержимое.</p>
 
-      <article class="panel" id="panel-cloud" role="tabpanel" aria-labelledby="tab-cloud" data-panel="cloud" hidden>
-        <div class="panel-copy">
-          <p class="panel-kicker">Для облачного окружения Claude Code</p>
-          <h2>Вставьте скрипт в настройки окружения</h2>
-          <ol>
-            <li>Откройте настройки окружения на <code>claude.ai/code</code>.</li>
-            <li>Скопируйте весь блок в поле <strong>Setup script</strong>.</li>
-            <li>Сохраните окружение и запустите новую cloud-сессию.</li>
-          </ol>
-          <p class="note">Скрипт обновляет только управляемый блок глобального <code>CLAUDE.md</code> и сохраняет остальное содержимое.</p>
-        </div>
-        <div class="code-card">
-          <div class="code-toolbar"><span>CLAUDE-CODE-SETUP.sh</span><button class="copy" data-copy="cloud-content">Копировать</button></div>
-          <pre><code id="cloud-content">Загрузка…</code></pre>
-        </div>
-      </article>
-    </section>
-
-    <section class="verification" aria-labelledby="verification-title">
-      <div>
-        <p class="eyebrow">Проверяемый источник</p>
-        <h2 id="verification-title">Стабильная версия не меняется задним числом</h2>
-      </div>
-      <div class="verification-links">
-        <a id="release-link" href="https://github.com/Alexio00/Orchestration/releases/tag/v5.0.0">Открыть релиз <span aria-hidden="true">↗</span></a>
-        <a id="snapshot-link" href="content/releases/v5.0.0-bootstrap-1.1.1-cloud-1.1.1/manifest.json">Manifest версии <span aria-hidden="true">→</span></a>
-      </div>
-    </section>
+    <h2>Версия и источник</h2>
+    <p>Стабильная версия не меняется задним числом. Точный снимок и исходную ревизию можно проверить по ссылкам:</p>
+    <ul>
+      <li><a id="release-link" href="https://github.com/Alexio00/Orchestration/releases/tag/v5.0.0">релиз General</a></li>
+      <li><a id="snapshot-link" href="content/releases/v5.0.0-bootstrap-1.1.1-cloud-1.1.1/manifest.json">манифест опубликованной версии</a></li>
+    </ul>
+    <p class="meta" id="source-revision">Источник: загрузка…</p>
   </main>
-
-  <footer>
-    <span>General 5 · русский язык</span>
-    <span id="source-revision">Источник: загрузка…</span>
-  </footer>
 
   <div class="toast" role="status" aria-live="polite"></div>
   <script src="app.js" defer></script>
